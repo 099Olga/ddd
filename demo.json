@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "52bfe0fb-df21-47f7-93a8-366cfef978a5",
+		"name": "Vikunja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login user test0409",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"test0409\",\"password\":\"test0409\",\"long_token\":false}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/login",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Team",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY1NzA5ODk4MywiaWQiOjMsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoidGVzdDA0MDkifQ.aygRs7gQc9VFtfH8g6bcWffNrBFBhxHYvTxoG0gsIbU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/teams?page=1",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"teams"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upcoming.Select a date range",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY1NzA5ODk4MywiaWQiOjMsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoidGVzdDA0MDkifQ.aygRs7gQc9VFtfH8g6bcWffNrBFBhxHYvTxoG0gsIbU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/tasks/all?sort_by[]=due_date&sort_by[]=id&order_by[]=asc&order_by[]=desc&filter_by[]=done&filter_by[]=due_date&filter_by[]=due_date&filter_value[]=false&filter_value[]=now%2Fw-2w&filter_value[]=now%2Fw-1w&filter_comparator[]=equals&filter_comparator[]=less&filter_comparator[]=greater&filter_concat=and&filter_include_nulls=false&page=1",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"all"
+					],
+					"query": [
+						{
+							"key": "sort_by[]",
+							"value": "due_date"
+						},
+						{
+							"key": "sort_by[]",
+							"value": "id"
+						},
+						{
+							"key": "order_by[]",
+							"value": "asc"
+						},
+						{
+							"key": "order_by[]",
+							"value": "desc"
+						},
+						{
+							"key": "filter_by[]",
+							"value": "done"
+						},
+						{
+							"key": "filter_by[]",
+							"value": "due_date"
+						},
+						{
+							"key": "filter_by[]",
+							"value": "due_date"
+						},
+						{
+							"key": "filter_value[]",
+							"value": "false"
+						},
+						{
+							"key": "filter_value[]",
+							"value": "now%2Fw-2w"
+						},
+						{
+							"key": "filter_value[]",
+							"value": "now%2Fw-1w"
+						},
+						{
+							"key": "filter_comparator[]",
+							"value": "equals"
+						},
+						{
+							"key": "filter_comparator[]",
+							"value": "less"
+						},
+						{
+							"key": "filter_comparator[]",
+							"value": "greater"
+						},
+						{
+							"key": "filter_concat",
+							"value": "and"
+						},
+						{
+							"key": "filter_include_nulls",
+							"value": "false"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Показать задачи без даты",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY1NzA5ODk4MywiaWQiOjMsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoidGVzdDA0MDkifQ.aygRs7gQc9VFtfH8g6bcWffNrBFBhxHYvTxoG0gsIbU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/tasks/all?sort_by[]=due_date&sort_by[]=id&order_by[]=asc&order_by[]=desc&filter_by[]=done&filter_by[]=due_date&filter_by[]=due_date&filter_value[]=false&filter_value[]=now%2Fw-2w&filter_value[]=now%2Fw-1w&filter_comparator[]=equals&filter_comparator[]=less&filter_comparator[]=greater&filter_concat=and&filter_include_nulls=true&page=1",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"all"
+					],
+					"query": [
+						{
+							"key": "sort_by[]",
+							"value": "due_date"
+						},
+						{
+							"key": "sort_by[]",
+							"value": "id"
+						},
+						{
+							"key": "order_by[]",
+							"value": "asc"
+						},
+						{
+							"key": "order_by[]",
+							"value": "desc"
+						},
+						{
+							"key": "filter_by[]",
+							"value": "done"
+						},
+						{
+							"key": "filter_by[]",
+							"value": "due_date"
+						},
+						{
+							"key": "filter_by[]",
+							"value": "due_date"
+						},
+						{
+							"key": "filter_value[]",
+							"value": "false"
+						},
+						{
+							"key": "filter_value[]",
+							"value": "now%2Fw-2w"
+						},
+						{
+							"key": "filter_value[]",
+							"value": "now%2Fw-1w"
+						},
+						{
+							"key": "filter_comparator[]",
+							"value": "equals"
+						},
+						{
+							"key": "filter_comparator[]",
+							"value": "less"
+						},
+						{
+							"key": "filter_comparator[]",
+							"value": "greater"
+						},
+						{
+							"key": "filter_concat",
+							"value": "and"
+						},
+						{
+							"key": "filter_include_nulls",
+							"value": "true"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить цены",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY1NzA5ODk4MywiaWQiOjMsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoidGVzdDA0MDkifQ.aygRs7gQc9VFtfH8g6bcWffNrBFBhxHYvTxoG0gsIbU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/tasks/23/comments?page=1",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"23",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменить даты поставки",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImVtYWlsUmVtaW5kZXJzRW5hYmxlZCI6ZmFsc2UsImV4cCI6MTY1NzA5ODk4MywiaWQiOjMsImlzTG9jYWxVc2VyIjp0cnVlLCJsb25nIjpmYWxzZSwibmFtZSI6IiIsInR5cGUiOjEsInVzZXJuYW1lIjoidGVzdDA0MDkifQ.aygRs7gQc9VFtfH8g6bcWffNrBFBhxHYvTxoG0gsIbU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/tasks/25/comments?page=1",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"25",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
